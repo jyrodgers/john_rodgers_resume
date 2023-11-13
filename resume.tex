@@ -1,0 +1,138 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+%\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {John Y. Rodgers}}\\
+	San Diego, CA $\cdot$ jyrodgers@protonmail.com $\cdot$ 858-231-4371 \\
+\end{center}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Viasat} \hfill San Diego, CA\\
+\textit{Software Engineer} \hfill 2018 - 2023\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Designed and implemented C++ library to manage UDP and OpenSSL-secured DTLS connections, provided both client/server roles, and multi-threading for heartbeat monitoring and packet queuing.
+	\item Provided real-time data for monitoring and analysis by developing multi-client to server log publishing microservice ( Docker / Kubernetes ) leveraging gRPC, Fluent Bit, Kafka, Grafana and Splunk.
+	\item Recovered data from failed microservices ( Docker / Kubernetes ) by creating 'black box' files, leveraging multiple threads, circular buffers, IPC-based communication, and remote volume store.
+	\item Optimized build process by developing file synchronization microservice ( Docker / Kubernetes ) to integrate artifacts stored in Perforce with CMake build system, leveraged bash for scripting, volume mounts for file transfer to host.
+	\item Delivered critical on-call technical support ensuring rapid issue resolution and system reliability, demonstrating a deep understanding of system architecture and cross-team product integration.
+	\item Served as Scrum Master for 8-member development team for 3 years, streamlined project workflows, managed tasks in JIRA and collaborated with leaders across teams to drive successful project outcomes.
+	\item Reduced time to build suite of applications by >3 hours through proposing, planning, and directing a summer intern project.
+	\item Decreased time to complete code reviews by revitalizing processes, empowering developers of all skills to actively contribute and learn from every PR, while integrating GitHub tools to streamline review process.
+	\item Lowered dependency on individual expertise by initiating peer education program, conducting needs assessments, mobilizing subject matter experts, and creating a comprehensive video knowledge base.
+	\item Boosted team technical proficiency by initiating weekly junior developer tech skill-up sessions resulting in a comprehensive system knowledge base of Zettelkasten and Diátaxis based notes populated with C4, Sequence, and State Diagrams.
+	\item Eliminated cybersecurity risks by monitoring vulnerabilitites using Blackduck and Security Scorecard, JIRA tracking of resolution, leading to a perfect security assessment for the project.
+\end{itemize}
+
+\textbf{United States Navy} \hfill \\
+\textit{Information Systems Technician} \hfill 2007 - 2012\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Performed exceptionally well under pressure and time critical situations, including ship-wide catastrophic loss of power while out at sea.
+	\item Supervised five-member team of diverse backgrounds and life experiences through daily operations by focusing on respect, communication, and motivation.
+	\item With only two years of experience, became System Administrator for the ship’s local-area network, a responsibility given normally to more senior personnel.
+	\item Configured, maintained, and monitored ship-wide local-area network including servers, firewalls, routers, and switches.
+\end{itemize}
+
+\header{Skills}
+Artifactory | Bash | C++ | CMake | Cap'n Proto | Confd | Consul | Docker | Docker-compose | Fluent bit | GDB | Google Test | Graphana | gRPC | Helm | JIRA | Jenkins | Kubernetes | OpenSSL | Python | Redis | Splunk | Terraform | Valgrind | Vault
+\\
+\vspace{2mm}
+
+%==== Education ====%
+\header{Education}
+\textbf{University of California San Diego}\hfill \\
+\textit{Jacobs School of Engineering} \\
+BS in Computer Science \hfill 2018\\
+\begin{itemize} \itemsep 1pt
+	\item Coursework: Object-Oriented Programming; Advanced Data Structures; Theory of Computability; Software Engineering; Computer Architecture; Artificial Intelligence: Search \& Reasoning; Computer Operations \& Product Engineering \\
+\end{itemize}
+
+\vspace{2mm}
+
+\header{Organizations}
+\textbf{UCSD Student Veterans Organization (SVO)} \hfill University California San Diego\\
+\textit{Vice President} \hfill 2016-2018\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Played a key role in orchestrating and executing diverse events including Raytheon Resume Panel \& Workshop, Industry Networking Event, and Amazon Alexa Hackathon.
+\end{itemize}
+
+\vspace*{2mm}
+
+\
+\end{document}
