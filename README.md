@@ -34,6 +34,6 @@ This command compiles the LaTeX file into a neatly formatted PDF, ready for subm
 
 Feel free to reach out for more information or professional inquiries:
 
-Email: jyrodgers@protonmail.com
-LinkedIn: [John Rodgers](https://www.linkedin.com/in/jyrodgers/)
+- Email: jyrodgers@protonmail.com
+- LinkedIn: [John Rodgers](https://www.linkedin.com/in/jyrodgers/)
 
